@@ -113,10 +113,15 @@ for(var i = 0; i < list.length; i++)
         item["temperature_max"] = temperature.split("–")[1];
     }
 
-
     poisson.push(item);
-
-
 }
 
-console.log(poisson);
+//console.log(poisson);
+
+var content = "";
+for(var i =0; i < poisson.length; i++)
+{
+    content = content + poisson[i].nom_scientifique +"|"+ poisson[i].nom_commom +"|"+ poisson[i].niveau+"|"+ poisson[i].taille_min+"|"+ poisson[i].taille_max+"|"+ poisson[i].volume+"|"+ poisson[i].PH_min+"|"+ poisson[i].PH_max+"|"+ poisson[i].GH_min+"|"+ poisson[i].GH_max+"|"+ poisson[i].temperature_min+"|"+ poisson[i].temperature_max + "\n";
+}
+
+console.log(content);
